@@ -32,7 +32,7 @@ inquirer
             name: 'usage'
         },
         {
-            type: 'list',
+            type: 'options',
             message: 'Tell us about the licenses for this project',
             name: 'license'
         },
@@ -60,23 +60,36 @@ inquirer
 
 // TODO: Create a function to write README file
     .then((response) => {
-        fs.writeFile('README.md', `# ${response.title}
+        fs.writeFile('README.md', `
         
-        ## ${response.description}
+        # Title
+        ${response.title}
         
-        ## ${response.toc}
+        ## Description 
+        ${response.description}
         
-        ## ${response.installation}
+        ## Table of Contents 
+        ${response.toc}
         
-        ## ${response.usage}
+        ## Installation Guide
+        ${response.installation}
         
-        ### ${response.license}
+        ## Usage
+        ${response.usage}
         
-        ### ${response.contributions}
+        ### License
+        ${response.license}
         
-        ### ${response.test}
+        ### Contributions
+        ${response.contributions}
         
-        ### ${response.questions}`)
+        ### Testing Info
+        ${response.test}
+        
+        ### Contact Info
+        ${response.questions}`, 'utf8', info =>
+        console.log('success')
+        )
     })
 
     
