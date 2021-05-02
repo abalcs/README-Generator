@@ -1,2 +1,2 @@
 # README-Generator
-README generator built with JavaScript &amp; Node.js
+README generator built with JavaScript and Node.js
