@@ -1,28 +1,28 @@
 
         
-        # Title
-        Readme Generator
+# Title
+README Generator
         
-        ## Description 
-        it's a generator....for readme's
+## Description 
+An easy way to generate annoying readme files for your projects
         
-        ## Table of Contents 
-        later
+## Table of Contents 
+Description, Table of Contents, Install Guide, Usage, License Info, Contributions, Testing Info, Contact Info
         
-        ## Installation Guide
-        later
+## Installation Guide
+n/a
         
-        ## Usage
-        easily
+## Usage
+With ease!  Just follow the prompts
         
-        ### License
-        none
+### License
+ISC
         
-        ### Contributions
-        submit pull requests!
+### Contributions
+Submit a pull request please
         
-        ### Testing Info
-        go for it
+### Testing Info
+n/a
         
-        ### Contact Info
-        abalcs@email.com
+### Contact Info
+abalcom23@gmail.com

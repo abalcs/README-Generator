@@ -32,8 +32,14 @@ inquirer
             name: 'usage'
         },
         {
-            type: 'options',
+            type: 'checkbox',
             message: 'Tell us about the licenses for this project',
+            choices: [
+                'Apache',
+                'MIT',
+                'ISC',
+                'GNU GPLv3'
+            ],
             name: 'license'
         },
         {
@@ -59,38 +65,38 @@ inquirer
     ])
 
 // TODO: Create a function to write README file
-    .then((response) => {
-        fs.writeFile('README.md', `
+.then((response) => {
+fs.writeFile('README.md', `
         
-        # Title
-        ${response.title}
+# Title
+${response.title}
         
-        ## Description 
-        ${response.description}
+## Description 
+${response.description}
         
-        ## Table of Contents 
-        ${response.toc}
+## Table of Contents 
+${response.toc}
         
-        ## Installation Guide
-        ${response.installation}
+## Installation Guide
+${response.installation}
         
-        ## Usage
-        ${response.usage}
+## Usage
+${response.usage}
         
-        ### License
-        ${response.license}
+### License
+${response.license}
         
-        ### Contributions
-        ${response.contributions}
+### Contributions
+${response.contributions}
         
-        ### Testing Info
-        ${response.test}
+### Testing Info
+${response.test}
         
-        ### Contact Info
-        ${response.questions}`, 'utf8', info =>
-        console.log('success')
-        )
-    })
+### Contact Info
+${response.questions}`, 'utf8', info =>
+console.log('success')
+)
+})
 
     
 
