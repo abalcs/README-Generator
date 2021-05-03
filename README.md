@@ -17,7 +17,7 @@
 
     This app was made with JavaScript and Node.js and allows the user to quickly and easily generate a readme.md file by following along the prompts in the terminal.
 ## Installation:
-    This app was made with JavaScript and Node.js and allows the user to quickly and easily generate a readme.md file by following along the prompts in the terminal.
+    Anyone with JavaScript and Node.js can run this app in their text editor.
 ## Usage:
     The README Generator can be used on any open source project that the user will be pushing to an open repository.
 ## Contributing:
