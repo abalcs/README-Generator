@@ -75,21 +75,21 @@ function generateMarkdown(response) {
 
 # Table of Contents
 
--[Description](#description)
--[Installation](#installation)
--[Usage](#usage)
--[Contributing](#contributing)
--[Test](#test)
--[Credits](#credits)
--[License](#license)
--[Questions](#questions)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Test](#test)
+- [Credits](#credits)
+- [License](#license)
+- [Questions](#questions)
 
 ## Description:
-![License](https://img.shields.io/badge/License-${response.license}-blue.svg) "Licesnse Badge")
+![License](https://img.shields.io/badge/License-${response.license}-blue.svg "License Badge")
 
     ${response.description}
 ## Installation:
-    ${response.description}
+    ${response.installation}
 ## Usage:
     ${response.usage}
 ## Contributing:
@@ -98,17 +98,18 @@ function generateMarkdown(response) {
     ${response.test}
 ## Credits:
     ${response.credits}
-## License
+## License:
     For more information about the License, click on the link below.
 
 - [License](https://opensource.org/licenses/${response.license})
 
 ##  Questions:
-    For questions about the Generator you can go to my Github page at teh following link:
+    For questions about the Generator you can go to my 
+    Github page at the following link:
 
 - [Github Profile](https://github.com/${response.username})
 
-For additional questions please reach out to my email at: ${response.email}.
+For additional questions please reach out to me via email at: ${response.email}.
 `
 }
         
