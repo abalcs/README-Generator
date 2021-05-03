@@ -1,6 +1,5 @@
-../node_modules
-../utils
+node_modules
+utils
 .DS_Store
 HW_README.md
-package-lock.json
-package.json
+*.json
