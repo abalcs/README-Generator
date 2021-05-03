@@ -15,13 +15,13 @@
 ## Description:
 ![License](https://img.shields.io/badge/License-ISC-blue.svg "License Badge")
 
-    This app was made with JavaScript and Node.js and allows the user to quickly and easily generate a readme.md file by following along the prompts in the terminal.
+    This app is made with JavaScript and Node.js.  It lets the user quickly create a README file from the command line.
 ## Installation:
-    Anyone with JavaScript and Node.js can run this app in their text editor.
+    Anyone with JavaScript, Node.js, and the comman line/text editor can use this app
 ## Usage:
-    The README Generator can be used on any open source project that the user will be pushing to an open repository.
+    Just answer the questions and the program will make the readme for you
 ## Contributing:
-    Please open a pull request for small updates.  For larger updates email me first.
+    Please open a pull request for small changes.  For larger changes email me first.
 ## Test: 
     n/a
 ## Credits:
