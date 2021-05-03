@@ -1,11 +1,13 @@
 // TODO: Include packages needed for this application
 let inquirer = require('inquirer');
 let fs = require('fs');
-const { writeFile } = require('fs/promises');
+let util = require('util');
+
+let writeFileAsync = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
-inquirer
-    .prompt([
+function promptUser() {
+    return inquirer.prompt([
         {
             type: 'input',
             message: 'What is your project title?',
@@ -15,11 +17,6 @@ inquirer
             type: 'input',
             message: 'Please describe your project',
             name: 'description'
-        },
-        {
-            type: 'input',
-            message: 'Please provide a table of contents',
-            name: 'toc'
         },
         {
             type: 'input',
@@ -45,7 +42,12 @@ inquirer
         {
             type: 'input',
             message: 'How do others contribute to this project?',
-            name: 'contributions'
+            name: 'contributing'
+        },
+        {
+            type: 'input',
+            message: 'Whose credit is this work?',
+            name: 'credits'
         },
         {
             type: 'input',
@@ -54,54 +56,74 @@ inquirer
         },
         {
             type: 'input',
-            message: 'What is your github URL?',
-            name: 'questions'
+            message: 'What is your github username?',
+            name: 'username'
         },
         {
             type: 'input',
             message: 'What is your email address?',
-            name: 'questions'
+            name: 'email'
         },
-    ])
-
-// TODO: Create a function to write README file
-.then((response) => {
-fs.writeFile('README.md', `
-        
-# Title
-${response.title}
-        
-## Description 
-${response.description}
-        
-## Table of Contents 
-${response.toc}
-        
-## Installation Guide
-${response.installation}
-        
-## Usage
-${response.usage}
-        
-### License
-${response.license}
-        
-### Contributions
-${response.contributions}
-        
-### Testing Info
-${response.test}
-        
-### Contact Info
-${response.questions}`, 'utf8', info =>
-console.log('success')
-)
-})
-
+    ]);
+}
     
+        
+// TODO: Create a function to write README file
+function generateMarkdown(response) {
+    return `
+# ${response.title}
 
+# Table of Contents
+
+-[Description](#description)
+-[Installation](#installation)
+-[Usage](#usage)
+-[Contributing](#contributing)
+-[Test](#test)
+-[Credits](#credits)
+-[License](#license)
+-[Questions](#questions)
+
+## Description:
+![License](https://img.shields.io/badge/License-${response.license}-blue.svg) "Licesnse Badge")
+
+    ${response.description}
+## Installation:
+    ${response.description}
+## Usage:
+    ${response.usage}
+## Contributing:
+    ${response.contributing}
+## Test: 
+    ${response.test}
+## Credits:
+    ${response.credits}
+## License
+    For more information about the License, click on the link below.
+
+- [License](https://opensource.org/licenses/${response.license})
+
+##  Questions:
+    For questions about the Generator you can go to my Github page at teh following link:
+
+- [Github Profile](https://github.com/${response.username})
+
+For additional questions please reach out to my email at: ${response.email}.
+`
+}
+        
 // // TODO: Create a function to initialize app
-function init() {}
+async function init() {
+    try {
+        const response = await promptUser();
+        const readMe = generateMarkdown(response);
+
+        await writeFileAsync('README.md', readMe);
+        console.log('Success!');
+    } catch(err) {
+        console.log(err);
+    }
+}
 
 // // Function call to initialize app
 init();
