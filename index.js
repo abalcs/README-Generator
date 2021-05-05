@@ -120,9 +120,9 @@ async function init() {
         const readMe = generateMarkdown(response);
 
         await writeFileAsync('README.md', readMe);
-        console.log('Success!');
+        console.log('SUCCESS!');
     } catch(err) {
-        console.log(err);
+        console.log("SOMETHING WENT WRONG!", err);
     }
 }
 
