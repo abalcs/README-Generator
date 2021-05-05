@@ -121,7 +121,7 @@ async function init() {
 
         await writeFileAsync('README.md', readMe);
         console.log('SUCCESS!');
-    } catch(err) {
+    } catch(err) {l
         console.log("SOMETHING WENT WRONG!", err);
     }
 }
