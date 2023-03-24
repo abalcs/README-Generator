@@ -15,25 +15,25 @@
 ## Description:
 ![License](https://img.shields.io/badge/License--blue.svg "License Badge")
 
-    A an application that generates a quality README file based on user input
+This app asks YOU the questions and build a README from your answers.
 ## Installation:
-    Clone repo to desktop and run node index.js
+Clone the repo and run the index.js file
 ## Usage:
-    n/a
+n/a
 ## Contributing:
-    PR's welcomed  :-) 
+PR's are welcomed :-)
 ## Test: 
-    n/a
+n/a
 ## Credits:
-    Alan Balcom
+Alan Balcom
 ## License:
-    For more information about the License, click on the link below.
+For more information about the License, click on the link below.
 
 - [License](https://opensource.org/licenses/)
 
 ##  Questions:
-    For questions about the Generator you can go to my 
-    Github page at the following link:
+For questions about the Generator you can go to my 
+Github page at the following link:
 
 - [Github Profile](https://github.com/abalcs)
 

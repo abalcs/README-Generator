@@ -87,25 +87,25 @@ function generateMarkdown(response) {
 ## Description:
 ![License](https://img.shields.io/badge/License-${response.license}-blue.svg "License Badge")
 
-    ${response.description}
+${response.description}
 ## Installation:
-    ${response.installation}
+${response.installation}
 ## Usage:
-    ${response.usage}
+${response.usage}
 ## Contributing:
-    ${response.contributing}
+${response.contributing}
 ## Test: 
-    ${response.test}
+${response.test}
 ## Credits:
-    ${response.credits}
+${response.credits}
 ## License:
-    For more information about the License, click on the link below.
+For more information about the License, click on the link below.
 
 - [License](https://opensource.org/licenses/${response.license})
 
 ##  Questions:
-    For questions about the Generator you can go to my 
-    Github page at the following link:
+For questions about the Generator you can go to my 
+Github page at the following link:
 
 - [Github Profile](https://github.com/${response.username})
 
